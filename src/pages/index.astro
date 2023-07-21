@@ -8,30 +8,42 @@ import bluffCatcher from "./bluff-catcher.jpeg";
   <main>
     <h1>Reasons to play <span class="text-gradient">72o</span></h1>
     <ul role="list" class="link-card-grid">
-      <Card href="https://docs.astro.build/" title="It's a great bluff catcher">
+      <Card title="It's a great bluff catcher">
         <img src={bluffCatcher} />
-        <pre>
-					2 limpers
-					Hero on CO: raise 6bb
-					Button: fold
-					SB: call
-					BB: fold
-					UTG: fold
-					UTG+1: fold
-					UTG+2: call
+        <pre>3 limpers
+Hero on CO: raise 6bb
+BTN: fold
+SB: call
+BB: fold
+UTG: fold
+UTG+1: fold
+LJ: fold
+HJ: call
 
-					Flop: T82s
-					SB: check
-					UTG+2: check
-					Hero: raise 10bb
-					SB: fold
-					UTG+2: re-raise 25bb
-					Hero: all-in, another 50bb
-					Utg+2: call
+Flop: T82s
+SB: check
+HJ: check
+Hero: raise 10bb
+SB: fold
+HJ: re-raise 25bb
+Hero: all-in, another 50bb
+HJ: call
 
-					Turn: 9
-					River K
-					</pre>
+Turn: 9
+River K</pre>
+      </Card>
+      <Card title="You can river trips">
+        <p>
+          <span class="text-gradient">72o</span> is good enough for Magnus. It's good enough for you.
+        </p>
+        <iframe
+          width="560"
+          height="315"
+          src="https://www.youtube.com/embed/-sQxx6mU__0"
+          title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen></iframe>
       </Card>
     </ul>
   </main>
@@ -57,13 +69,11 @@ import bluffCatcher from "./bluff-catcher.jpeg";
   }
   .link-card-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
+    grid-auto-flow: row;
     gap: 1rem;
     padding: 0;
   }
   img {
-    width: 90%;
-    margin-left: 5%;
-    border-radius: 0.6rem;
+    width: 100%;
   }
 </style>
